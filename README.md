@@ -90,6 +90,7 @@ define('DB_PASS', ''); // در XAMPP به طور پیش‌فرض خالی است
 اکیداً توصیه می‌شود که بلافاصله پس از اولین ورود، رمز عبور خود را از طریق بخش "تغییر رمز عبور" در پنل مدیریت تغییر دهید.
 
 ========================================================================
+
 Hotel Management System
 A complete and dynamic hotel website and management system built with PHP, MySQL, and modern frontend technologies. This project provides a beautiful, user-friendly interface for guests and a powerful, secure admin panel for hotel staff to manage all aspects of the business.
 
