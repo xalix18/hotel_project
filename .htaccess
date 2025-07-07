@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+
+# --- بخش دوم: جلوگیری از نمایش محتوای پوشه‌ها ---
+
+# این دستور به سرور می‌گوید که لیست فایل‌های داخل پوشه‌ها را به کاربر نمایش ندهد.
+# این کار امنیت سایت را به شدت افزایش می‌دهد.
+Options -Indexes
+
+
+# --- بخش سوم (اختیاری): هدایت تمام درخواست‌ها به یک فایل اصلی ---
+# اگر می‌خواهید تمام درخواست‌ها از طریق یک فایل (مثلاً index.php) مدیریت شوند (مناسب برای فریمورک‌ها)
+# می‌توانید این خطوط را از کامنت خارج کنید. در پروژه فعلی ما نیازی به این بخش نیست.
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule . index.php [L]
